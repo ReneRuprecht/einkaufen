@@ -1,0 +1,15 @@
+services:
+  db:
+    image: mysql:9.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'einkaufen'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - ./db-data:/var/lib/mysql
