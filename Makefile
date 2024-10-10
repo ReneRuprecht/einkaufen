@@ -7,3 +7,6 @@ down:
 
 logs:
 	docker-compose -f $(COMPOSE) logs -f
+
+ps:
+	docker-compose -f $(COMPOSE) ps
